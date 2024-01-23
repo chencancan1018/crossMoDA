@@ -1,0 +1,24 @@
+## 构建docker
+
+    在Dockerfile所在路径执行(image-name可设置为inferflare:v11, 前者为image name， 后者为tag版本)：    
+    $ docker build -t image-name .
+
+## 查看image ID
+    
+    查看打包的docker镜像的image id 
+    $ docker images
+
+## docker重命名(inferflare:latest)
+
+    $ docker tag IMAGE_ID  inferflare:latest
+
+## docker check
+
+    $ sudo docker container run --gpus "device=1" --name inferflare -it --rm  -v /home/tx-deepocean/workspace_ccc/grand/flare/stage1/inputs/:/workplace/inputs/:z -v  /home/tx-deepocean/workspace_ccc/grand/flare/stage1/outputs:/workspace/outputs/   inferflare:latest /bin/bash -c "sh predict.sh"
+
+## docker 导出
+
+    示例：docker save -o inferflare.tar.gz inferflare:latest
+    $ docker save -o output-filename inferflare:latest
+
+docker  run --rm --gpus "device=2" -v /home/tx-deepocean/Data1/data1/workspace_ccc/crossMoDA/SegSub/src/input/:/input/:ro -v /home/tx-deepocean/Data1/data1/workspace_ccc/crossMoDA/SegSub/src/output/:/output/ -it docker.synapse.org/syn51495626/infervision:v0

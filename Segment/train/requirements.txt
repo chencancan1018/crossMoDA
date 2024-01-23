@@ -1,0 +1,12 @@
+-i https://repos.infervision.com/repository/pypi/simple
+einops==0.4.1
+timm==0.6.7
+protobuf<=3.19.0
+scipy==1.2.0
+numpy<=1.21.6
+SimpleITK==2.0.2
+starship==0.4.5
+starship.umtf==0.4.3
+torchgeometry==0.1.2
+torch==1.7.1
+torchvision==0.8.2

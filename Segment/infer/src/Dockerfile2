@@ -1,0 +1,25 @@
+
+FROM hub.infervision.com/algo/bw-ocean:0.4.4-a7
+
+
+
+COPY  src/input .
+
+
+#RUN python3 -V
+
+#RUN python3 -m pip install -i https://mirrors.aliyun.com/pypi/simple/ --upgrade pip setuptools wheel
+
+#UN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ 
+
+#RUN python3 -m pip install -r requirements1.txt
+
+#RUN python3 -m pip install -r requirements2.txt
+
+COPY ./ ./
+
+# WORKDIR /src
+# CMD ["infer.sh"]
+
+CMD ["/src/run_inference.py"]
+ENTRYPOINT ["python3"]
